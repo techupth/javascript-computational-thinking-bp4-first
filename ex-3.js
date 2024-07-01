@@ -82,3 +82,13 @@ let orders = [
 ];
 
 // Start coding here
+
+let jcbPaid = [];
+
+for (let i = 0; i < orders.length; i++) {
+  if (orders[i].creditCardType === "jcb") {
+    jcbPaid.push(orders[i]);
+  }
+}
+
+console.log(jcbPaid);
