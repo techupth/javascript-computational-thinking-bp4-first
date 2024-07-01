@@ -82,3 +82,51 @@ let orders = [
 ];
 
 // Start coding here
+
+const studentScores = [
+  { name: "James", score: 40 },
+  { name: "Ann", score: 80 },
+  { name: "Joe", score: 52 },
+  { name: "Ball", score: 67 },
+  { name: "Mick", score: 89 },
+  { name: "Ole", score: 10 },
+];
+
+function averageScore(arrayScores) {
+  let average = 0;
+  for (let i in arrayScores) {
+    average += arrayScores[i].score;
+  }
+
+  console.log(`Average score is ${average / arrayScores.length}`);
+}
+
+function topScore(arrayScores) {
+  let x = 0;
+  let y;
+  for (let i in arrayScores) {
+    if (arrayScores[i].score > x) {
+      x = arrayScores[i].score;
+      y = arrayScores[i].name;
+    }
+  }
+
+  console.log(`${y} has the highest score, which is ${x} points`);
+}
+
+function lowerScore(arrayScores) {
+  let x = 100;
+  let y;
+  for (let i in arrayScores) {
+    if (arrayScores[i].score < x) {
+      x = arrayScores[i].score;
+      y = arrayScores[i].name;
+    }
+  }
+
+  console.log(`${y} has lowest score, which is ${x} points`);
+}
+
+averageScore(studentScores);
+topScore(studentScores);
+lowerScore(studentScores);

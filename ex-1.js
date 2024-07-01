@@ -82,3 +82,18 @@ let orders = [
 ];
 
 // Start coding here
+
+function findProductQuantity(product) {
+  let topSale;
+  let topX = 0;
+  for (let i = 0; i < product.length; i++) {
+    let x = product[i].productPrice * product[i].productQuantity;
+    if (x > topX) {
+      topX = x;
+      topSale = product[i];
+    }
+  }
+  return topSale;
+}
+
+console.log(findProductQuantity(orders));
